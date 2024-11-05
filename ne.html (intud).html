@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรไฟล์</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4);
+            background-size: 200% 200%;
+            animation: gradientBG 10s ease infinite;
+            overflow: hidden; /* ป้องกันการเลื่อนเมื่อใส่ของตกแต่ง */
+        }
+
+        /* การเคลื่อนไหวของพื้นหลัง */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* กล่องโปรไฟล์ */
+        .profile-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 1; /* ให้กล่องโปรไฟล์อยู่ด้านหน้า */
+        }
+
+        .profile-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-container h1 {
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .profile-container p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* ของตกแต่งวงกลม */
+        .decoration {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            z-index: 0;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .circle1 {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.3);
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .circle2 {
+            width: 150px;
+            height: 150px;
+            background-color: rgba(255, 255, 255, 0.2);
+            bottom: 15%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .circle3 {
+            width: 120px;
+            height: 120px;
+            background-color: rgba(255, 255, 255, 0.25);
+            top: 60%;
+            right: 30%;
+            animation-delay: 4s;
+        }
+
+        /* การเคลื่อนไหวของวงกลม */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ของตกแต่งวงกลม -->
+    <div class="decoration circle1"></div>
+    <div class="decoration circle2"></div>
+    <div class="decoration circle3"></div>
+    <div class="profile-container">
+        <!-- ใส่ลิงก์รูปภาพของคุณแทนที่ "profile.jpg"-->
+        <img src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-6/465153444_2234186486938376_7511307028808531200_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Ws-q4ucTafYQ7kNvgFh910f&_nc_zt=23&_nc_ht=scontent.fbkk28-1.fna&_nc_gid=A2eXO6fZh3bA2WKb20bbYO5&oh=00_AYBUFBvaqsMRF8o6eVnm5MaZ8TfJcOY1iuuJ_i6FGGuiSw&oe=672FC518">
+        <h1> Phirun Nitcharoenrot</h1>
+        <p>Hobby:<br> play game<br>read manga</p>
+        <p>birthday 22:01:2004</p>
+    </div>
+ 
+</body>
+</html>
